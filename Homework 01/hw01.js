@@ -35,7 +35,7 @@ console.log(discount);  //знижка у відсотках
 
 let cheaperAt = (sum*discount)/100; //знижка у % переведена в грошовий еквівалент
 
-let sumWithDiscount = parseFloat(sum - cheaperAt).toFixed(2); 
+let sumWithDiscount = parseFloat((sum - cheaperAt).toFixed(2)); 
 
 console.log(sumWithDiscount); //вартість зі знижкою
 
