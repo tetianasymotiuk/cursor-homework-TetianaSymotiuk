@@ -29,17 +29,19 @@ let averegePrice = parseFloat(((busTicket+suitCase+lunchBox)/3).toFixed(2));
 console.log(averegePrice);
 
 
-let discount = Math.random ()*100; //знижка у відсотках
+let discount = Math.random ()*100; 
 
 console.log(discount);  //знижка у відсотках
 
-let sumWithDiscount = (sum*discount)/100; //знижка в грошовому еквіваленті
+let cheaperAt = (sum*discount)/100; //знижка у % переведена в грошовий еквівалент
 
-console.log(+sumWithDiscount.toFixed(2));  //знижка в грошовому еквіваленті
+let sumWithDiscount = sum - cheaperAt; 
 
-let lost = (sum/2)-(sum-sumWithDiscount);  //втрачена вигода
+console.log(+sumWithDiscount.toFixed(2)); //вартість зі знижкою
 
-console.log(lost);   //втрачена вигода
+let profit = (sum - sumWithDiscount) - sum/2; 
+
+console.log(profit); //приуток
 
 let templateLine = `Максимальне число - ${numberMax};<br>
 Мінімальне число - ${numberMin};<br>
@@ -51,7 +53,7 @@ let templateLine = `Максимальне число - ${numberMax};<br>
 Середня вартість - ${averegePrice};<br>
 Знижка - ${discount};<br>
 Вартість зі знижкою - ${sumWithDiscount};<br>
-Втрачена вигода - ${lost};<br>
+Прибуток - ${profit};<br>
 `;
 console.log(templateLine);
 
