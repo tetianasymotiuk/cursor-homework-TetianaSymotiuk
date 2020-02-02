@@ -35,13 +35,13 @@ console.log(discount);  //знижка у відсотках
 
 let cheaperAt = (sum*discount)/100; //знижка у % переведена в грошовий еквівалент
 
-let sumWithDiscount = sum - cheaperAt; 
+let sumWithDiscount = (sum - cheaperAt).toFixed(2); 
 
-console.log(+sumWithDiscount.toFixed(2)); //вартість зі знижкою
+console.log(sumWithDiscount); //вартість зі знижкою
 
 let profit = (sum - sumWithDiscount) - sum/2; 
 
-console.log(profit); //приуток
+console.log(profit); //прибуток
 
 let templateLine = `Максимальне число - ${numberMax};<br>
 Мінімальне число - ${numberMin};<br>
