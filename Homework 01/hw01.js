@@ -39,7 +39,7 @@ let sumWithDiscount = parseFloat((sum - cheaperAt).toFixed(2));
 
 console.log(sumWithDiscount); //вартість зі знижкою
 
-let profit = (sum - sumWithDiscount) - sum/2; 
+let profit = sumWithDiscount - (sum/2);
 
 console.log(profit); //прибуток
 
