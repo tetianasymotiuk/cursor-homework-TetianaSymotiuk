@@ -1,13 +1,13 @@
 let busTicket = 15.678;
 let suitCase = 123.965;
 let lunchBox = 90.2345;
-console.log(busTicket);
-console.log(suitCase);
-console.log(lunchBox);
 
-console.log(Math.max(busTicket, suitCase, lunchBox));
 
-console.log(Math.min(busTicket, suitCase, lunchBox));
+let numberMax = Math.max(busTicket, suitCase, lunchBox);
+console.log(numberMax);
+
+let numberMin = Math.min(busTicket, suitCase, lunchBox);
+console.log(numberMin);
 
 let sum = (busTicket + suitCase + lunchBox);
 console.log(sum); 
@@ -15,13 +15,18 @@ console.log(sum);
 sumIntegers = Math.trunc(busTicket) + Math.trunc(suitCase) + Math.trunc(lunchBox);
 console.log(sumIntegers);
 
-console.log(Math.ceil(sum/100)*100);
+let ceilNumber = Math.ceil(sum/100)*100;
+console.log(ceilNumber);
 
-if(299%2===0){console.log("true")}else{console.log("false")};
+//if(Math.floor(sum)%2===0){console.log("true")}else{console.log("false")};
+let boolenSum = Math.floor(sum)%2===0;
+console.log("Boolen sum: " + boolenSum);
 
-console.log(change = 500-sum);
+let change = 500-sum;
+console.log(change);
 
-console.log(parseFloat(((busTicket+suitCase+lunchBox)/3).toFixed(2)));
+let averegePrice = parseFloat(((busTicket+suitCase+lunchBox)/3).toFixed(2));
+console.log(averegePrice);
 
 
 let discount = Math.random ()*100; //знижка у відсотках
@@ -36,23 +41,18 @@ let lost = (sum/2)-(sum-sumWithDiscount);  //втрачена вигода
 
 console.log(lost);   //втрачена вигода
 
-const templateLine = `Максимальне число - 123.965
-Мінімальне число - 15.678
-Вартісь всіх товарів - 229.8775
-Вартість всіх товарів (ціле значення) - 228
-Вартість товарів округлена до сотень - 300
-Парне число? - false
-Решта з 500 - 270.1225
-Середня вартість - 76.63
-Знижка - 58%
-Вартість зі знижкою - 135.14
-Втрачена вигода - 25.6`
-
+let templateLine = `Максимальне число - ${numberMax};<br>
+Мінімальне число - ${numberMin};<br>
+Вартісь всіх товарів - ${sum};<br>
+Вартість всіх товарів (ціле значення) - ${sumIntegers};<br>
+Вартість товарів округлена до сотень - ${ceilNumber};<br>
+Парне число? - ${boolenSum};<br>
+Решта з 500 - ${change};<br>
+Середня вартість - ${averegePrice};<br>
+Знижка - ${discount};<br>
+Вартість зі знижкою - ${sumWithDiscount};<br>
+Втрачена вигода - ${lost};<br>
+`;
 console.log(templateLine);
 
-
-
-
-
-
-
+document.getElementById("div1").innerHTML = templateLine;
