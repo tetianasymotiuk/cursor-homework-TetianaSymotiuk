@@ -1,10 +1,10 @@
-let startN = parseInt(prompt("Уведіть число N"), 10); //переведення з string в numberчи ціле число
+let startN = parseInt(prompt("Введіть число N"), 10); //переведення з string в numberчи ціле число
 
 console.log( "Number N : ",  startN);
 
 console.log(Number.isInteger(startN)); //чи ціле число
 
-let finishM = parseInt(prompt("Уведіть число M"), 10);
+let finishM = parseInt(prompt("Введіть число M"), 10);
 
 console.log( "Number M : ", finishM);
 
