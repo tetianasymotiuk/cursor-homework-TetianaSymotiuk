@@ -44,7 +44,7 @@ function convertCurrency(str) {
 function getRandomPassword(passwordLength = 8) {
     let password = '';
     for (i=0; i<passwordLength; i++); {
-        password += Math.round(Math.random() * 100);
+        password += Math.round(Math.random() * 100000000);
     }
     return password;
 }
