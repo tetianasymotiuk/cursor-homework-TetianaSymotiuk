@@ -51,17 +51,8 @@ function getRandomPassword(passwordLength = 8) {
 
 
 //function 10
-function isPalindrom(str) {
-        let result = true;
-        for (let i=0; i<(str.length/2); i++) {
-        let leftChar = str[i];
-        let rightChar = str[str.length - (i+1)];
-        if (leftChar !== rightChar) {
-            return false;
-        }
-        return result;
-    }
-}
+
+const isPalindrom = str => str.split('').reverse().join('') === str;
 
 
 let templateLine = `
@@ -70,7 +61,7 @@ let templateLine = `
 Функція 4 (1000) => ${sumWithoutTax(1000)};<br>
 Функція 7 (2500UAH) => ${convertCurrency('2500UAH')}$;<br>
 Функція 8 => ${getRandomPassword()};<br>
-Функція 10 (madam)=> ${isPalindrom('madam')};<br>
+Функція 10 ()=> ${isPalindrom('madam')};<br>
 `;
 console.log(templateLine);
 
