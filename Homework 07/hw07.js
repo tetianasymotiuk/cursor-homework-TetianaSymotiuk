@@ -33,16 +33,17 @@ function getTotalTaxes() {
 console.log(getTotalTaxes.call(ukraine));
 
 //function 4
-function getMySalary(country) {
+function getMySalary() {
     let result = {};
-    let randomSalary = Math.floor(Math.random()*(2000-1500) + 1500);
+    let randomSalary = Math.round(1500 + Math.random() * 500);
     result.salary = randomSalary;
-    result.taxes = parseFloat((country.tax * randomSalary).toFixed(2));
-    result.profit = parseFloat((result.salary - result.taxes).toFixed(2));
+    result.taxes = this.tax * randomSalary;
+    result.profit = result.salary - result.taxes;
     return console.log(result);
-};
+}
+
 let timeOut = setTimeout(function wait() {
-    getMySalary(ukraine);
+    getMySalary.call(ukraine);
     timeOut = setTimeout(wait, 10000);
 }, 10000);
 
