@@ -16,7 +16,7 @@ class Student {
         if (this.marks === null) {
             return null;
         } else {
-            this.marks.splice(3, 0, number);
+            return this.marks = [...this.marks.slice(0, 4), 5];
         }
     } 
     getAverageMark() {
