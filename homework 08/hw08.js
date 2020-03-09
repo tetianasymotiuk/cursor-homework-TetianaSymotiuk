@@ -8,7 +8,6 @@ class Student {
     get getInfo(){
         return console.log(`Студент - ${this.fullName}, навчається на ${this.course} курсі в ${this.university} .`); 
     }
-    
     get getMarks() {
         return console.log(this.marks); 
     }

@@ -9,6 +9,7 @@ document.addEventListener('keydown',event=>{
 })
 const playMusic = (id) =>{
   document.getElementById(`${id}-sound`).play();
+  audio.currentTime = 0;
   setTimeout(()=>{
     document.getElementById(`${id}-sound`).pause();
   },1000)
