@@ -6,16 +6,17 @@ class Student {
         this.fullName = fullName;
     }
     get getInfo(){
-        return console.log(`Студент - ${this.fullName}, навчається на ${this.course} курсі в ${this.university} .`); 
+        return console.log('інформація про студента : ', `Студент - ${this.fullName}, навчається на ${this.course} курсі в ${this.university} .`); 
     }
+    
     get getMarks() {
-        return console.log(this.marks); 
+        return console.log('get marks : ',this.marks); 
     }
-    set setMarks(number) {
+    set setMarks(value) {
         if (this.marks === null) {
             return null;
         } else {
-            return this.marks = [...this.marks.slice(0, 4), 5];
+            return console.log('set marks : ',this.marks = [...this.marks, value]);
         }
     } 
     getAverageMark() {
@@ -43,8 +44,7 @@ let petro = new Student(`НЛТУ`, `3`, 'Петро Горобець');
 petro.getInfo;
 petro.getMarks;
 petro.setMarks = 5;
-petro.getMarks;
-console.log(petro.getAverageMark());
+console.log('середня оцінка :', petro.getAverageMark());
 petro.dismiss();
 petro.recover();
 
