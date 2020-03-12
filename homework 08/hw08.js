@@ -4,51 +4,49 @@ class Student {
         this.university = university;
         this.course = course;
         this.fullName = fullName;
-        this.dismissed = false;
     }
     get getInfo(){
         return console.log('інформація про студента : ', `Студент - ${this.fullName}, навчається на ${this.course} курсі в ${this.university} .`); 
     }
     
     get getMarks() {
-        if(this.isOpenSomeFlag) {
-            return null;
-        }else{
-        return console.log('get marks : ',this.marks)};
+        return this.marks;
     }
-    
     set setMarks(value) {
-        if (this.dismissed) {
-            return null;
+        if (this.marks !== null) {
+            this.marks = [...this.marks, value];
+            return this.marks;
         } else {
-            return console.log('set marks : ',this.marks = [...this.marks, value]);
-        }
-    } 
-    getAverageMark() {
-        if (this.marks == null) {
             return null;
-        } else {
-            return this.marks.reduce((prevValue, value) => {
-                prevValue += value;
-                return prevValue;
-            }, 0) / this.marks.length;
         }
+    }
 
-    } 
+    getAverageMark() {
+        let sum = 0;
+        for(let i = 0; i<this.marks.length;i++){
+            sum+=this.marks[i];
+        }
+        return sum / this.marks.length;
+    }
+
     dismiss() {
-        this.dismissed = true;
+        this.marks === null;
         return console.log(`студент відрахований`);
     } 
     recover() {
-        this.dismissed = false;
+        if(this.marks === null) {
+            return (this.marks = []);
+        } else {
         return console.log('студента зарахований');
-    } 
+        } 
+    }
 }
 
 let petro = new Student(`НЛТУ`, `3`, 'Петро Горобець');
 petro.getInfo;
-petro.getMarks;
+console.log(petro.getMarks);
 petro.setMarks = 5;
+console.log(petro.getMarks);
 console.log('середня оцінка :', petro.getAverageMark());
 petro.dismiss();
 petro.recover();
@@ -76,7 +74,6 @@ let vasyl = new BudgetStudent('НЛТУ', 2, 'Василь Гаврилюк');
 vasyl.getInfo;
 vasyl.getMarks;
 vasyl.getScholarship();
-
 
 
 
