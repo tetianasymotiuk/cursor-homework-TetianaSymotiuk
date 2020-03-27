@@ -4,7 +4,7 @@ import {pairsStudents} from './hw04.js'
 import {getRandomArray} from './hw05.js'
 const hw06 = require('./hw06');
 const hw07 = require('./hw07');
-import  '. /.. /dist/styles.css';
+import  './../dist/styles.css';
 
 
 console.log('hw 01 - numberMax', numberMax);
