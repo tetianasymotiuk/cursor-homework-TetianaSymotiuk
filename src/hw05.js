@@ -1,13 +1,14 @@
 // function 1
-function getRandomArray(length, min, max) {
+export function getRandomArray(length, min, max) {
     let arr = [];
     for(let i=0; i<length; i++) {
         arr[i] = Math.floor(Math.random() * (max-min));
     } return arr;
 }
-console.log('hw 05 - random array', getRandomArray(15, 1, 100));
+// console.log('масив випадкових чисел');
+// console.log(getRandomArray(15, 1, 100));
 
-// // function 3
+// function 3
 // function getAverage(...numbers) {
 //     let arr = numbers.filter(item => (parseFloat(item) - parseInt(item)) === 0);
 //     return (arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0))/arr.length;
@@ -15,14 +16,14 @@ console.log('hw 05 - random array', getRandomArray(15, 1, 100));
 // console.log('середнє арифметичне');
 // console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
-// // function 5
+// function 5
 // function filterEvenNumbers(...numbers) {
 //     return numbers.filter(item => ((parseFloat(item) - parseInt(item)) === 0) && item % 2);
 // }
 // console.log('фільтр парних чисел');
 // console.log(filterEvenNumbers(1, 2, 3, 4, 5, 6));
 
-// // function 6
+// function 6
 // function countPositiveNumbers(...numbers) {
 //     let arr = numbers.filter(item => (parseFloat(item) - parseInt(item)) === 0);
 //     return arr.reduce((sum, item) => {
@@ -35,7 +36,7 @@ console.log('hw 05 - random array', getRandomArray(15, 1, 100));
 // console.log('кількість чисел більше 0');
 // console.log(countPositiveNumbers(0, 4, -5, 5, -8,));
 
-// // function 7
+// function 7
 // function getDividedByFive(...numbers) {
 //     let arr = numbers.filter(item => (parseFloat(item) - parseInt(item)) === 0);
 //     return arr.filter(item => item % 5 === 0);
@@ -43,7 +44,7 @@ console.log('hw 05 - random array', getRandomArray(15, 1, 100));
 // console.log('числа, які діляться на 5');
 // console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
-// // function 8
+// function 8
 // function replaceBadWords(string) {
 //     let badWords = ['shit', 'fuck'];
 //     let arr = string.split(' ');

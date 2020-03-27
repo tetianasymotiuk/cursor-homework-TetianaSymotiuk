@@ -10,8 +10,8 @@ function makePairs(students) {
         pairsStudents [i] = [boysStudents[i], girlsStudents[i]];
     } return pairsStudents;
 }
-const pairsStudents = makePairs(students);
-console.log('hw 04 - pairs students', pairsStudents);
+export const pairsStudents = makePairs(students);
+// console.log(pairsStudents);
 
 // function takeThemes(pairsStudents, themes) {
 //     let pairsHaveThemes = [];

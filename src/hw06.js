@@ -22,20 +22,22 @@ const students = [{
       english: [5, 3],
       cosmology: [5, 5, 5, 5]
     }
-  }];
+}];
 
 // function 1
-function getSubjects(student) {
+export function getSubjects(student) {
     let result = [];
     result = Object.keys(student.subjects).map(value => {
         if(value.includes('_')){
             value = value.replace('_', ' ');
-        }; return value[0].toUpperCase() + value.slice(1);
-    }); return result;
+        };
+         return value[0].toUpperCase() + value.slice(1);
+    });
+     return result;
 };
-console.log('hw 06 - students subjects', getSubjects(students[0]));
+console.log('hw 06 - get subjects students',getSubjects(students[0]));
 
-// // function 2
+// function 2
 // function getAverageMark(students) {
 //     let result = Object.values(students.subjects);
 //     let length = 0;
@@ -55,7 +57,7 @@ console.log('hw 06 - students subjects', getSubjects(students[0]));
 // };
 // console.log(getAverageMark(students[0]));
 
-// // function 3
+// function 3
 // function getStudentInfo(students) {
 //     let result = [];
 //     let averageMark = getAverageMark(students);
@@ -66,11 +68,11 @@ console.log('hw 06 - students subjects', getSubjects(students[0]));
 // };
 // console.log(getStudentInfo(students[0]));
 
-// // function 4
+// function 4
 // const getStudentsNames = (students) => students.map(value => value.name).sort();
 // console.log(getStudentsNames(students));
 
-// // function 5
+// function 5
 // function getBestStudent(students) {
 //     let result = [];
 //     let max = 0;
@@ -87,7 +89,7 @@ console.log('hw 06 - students subjects', getSubjects(students[0]));
 // };
 // console.log(getBestStudent(students));
 
-// // function 6
+// function 6
 // function calculateWordLetters(string) {
 //     let result = [];
 //     let newString = string.toLowerCase();

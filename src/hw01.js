@@ -3,9 +3,7 @@ let suitCase = 123.965;
 let lunchBox = 90.2345;
 
 
-let numberMax = Math.max(busTicket, suitCase, lunchBox);
-console.log("hw 01 - max number", numberMax);
-
+export let numberMax = Math.max(busTicket, suitCase, lunchBox);
 
 
 // let numberMin = Math.min(busTicket, suitCase, lunchBox);
@@ -20,7 +18,7 @@ console.log("hw 01 - max number", numberMax);
 // let ceilNumber = Math.ceil(sum/100)*100;
 // console.log(ceilNumber);
 
-// if(Math.floor(sum)%2===0){console.log("true")}else{console.log("false")};
+//if(Math.floor(sum)%2===0){console.log("true")}else{console.log("false")};
 // let boolenSum = Math.floor(sum)%2===0;
 // console.log("Boolen sum: " + boolenSum);
 

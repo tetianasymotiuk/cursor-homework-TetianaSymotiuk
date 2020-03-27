@@ -18,21 +18,21 @@ function getMyTaxes(salary) {
 };
 console.log('hw 07 - taxes in Ukraine', getMyTaxes.call(ukraine, 30000));
 
-// //function 2
+//function 2
 // function getMiddleTaxes() {
 //     result = this.tax * this.middleSalary;
 //     return result;
 // };
 // console.log(getMiddleTaxes.call(ukraine));
 
-// //function 3
+//function 3
 // function getTotalTaxes() {
 //     result = this.tax * this.middleSalary * this.vacancies;
 //     return result;
 // };
 // console.log(getTotalTaxes.call(ukraine));
 
-// //function 4
+//function 4
 // function getMySalary() {
 //     let result = {};
 //     let randomSalary = Math.floor(Math.random() * (2000 - 1500) + 1500);

@@ -1,5 +1,5 @@
 //function 1
-function getMaxDigit(number) {
+export function getMaxDigit(number) {
     number = number.toString();
     let max = 0;
     for (let i=0; i< number.length; i++) {
@@ -9,9 +9,10 @@ function getMaxDigit(number) {
         }
         return max;
 }
-console.log('hw 03 - max digit', getMaxDigit(12345));
+// console.log('hw 03 - max digit', getMaxDigit(12345));
 
-// //function 3
+
+//function 3
 // function getCorectName(name) {
 //     name = name.toLowerCase();
 //     let nameSlice = name.slice(1, name.length);
@@ -20,14 +21,14 @@ console.log('hw 03 - max digit', getMaxDigit(12345));
 // }
  
 
-// //function 4
+//function 4
 // function sumWithoutTax(sum){
 //     sum = sum - (sum * 0.195)
 //     return sum;
 // };
 
 
-// //function 7
+//function 7
 // function convertCurrency(str) {
 //     let result = 'shoud be $ or UAH';
 //     let dollars = parseInt(str, 10) * 25;
@@ -40,7 +41,7 @@ console.log('hw 03 - max digit', getMaxDigit(12345));
 //     return result;
 // }
 
-// //function 8
+//function 8
 // function getRandomPassword(passwordLength = 8) {
 //     let password = '';
 //     for (i=0; i<passwordLength; i++); {
@@ -50,7 +51,7 @@ console.log('hw 03 - max digit', getMaxDigit(12345));
 // }
 
 
-// //function 10
+//function 10
 
 // const isPalindrom = str => str.split('').reverse().join('') === str;
 
