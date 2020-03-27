@@ -1,11 +1,14 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+
 module.exports = {
     entry: ['@babel/polyfill',
         './src/index.js'],
     output: {
-        path: __dirname + './dist',
-        filename: 'main.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
+    mode: 'development',
     devServer: {
         contentBase:  __dirname + './dist',
         port: 3000,
